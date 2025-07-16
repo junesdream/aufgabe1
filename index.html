@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Medienliste</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header id="mainHeader">
+    <div class="left">
+        <button class="menu-icon" aria-label="Menü öffnen">
+            <img src="img/list.png" alt="Menü öffnen" width="22" height="22">
+        </button>
+        <h1>Medien</h1>
+    </div>
+    <div class="right">
+        <button id="toggleView" aria-label="Ansicht wechseln">
+            <img id="toggleIcon" src="img/grid.png" alt="Ansicht wechseln" width="22" height="22">
+        </button>
+        <button id="showFavorites" aria-label="Favoriten anzeigen">
+            <img id="favIcon" src="img/star.png" alt="Favoriten anzeigen" width="22" height="22">
+        </button>
+        <button id="addItem" class="add-item" aria-label="Neues Element hinzufügen">
+            <img src="img/plus.png" alt="Hinzufügen" width="22" height="22">
+        </button>
+    </div>
+</header>
+
+<header id="likedHeader" style="display:none;">
+    <button id="backBtn" aria-label="Zurück" class="back-btn">
+        <img src="img/arrow-left.png" alt="Zurück" width="22" height="22">
+    </button>
+    <h1>Liked tracks</h1>
+</header>
+
+<div id="likedTopbar" style="display:none;">
+    <span id="likedCount"></span>
+    <img src="img/shuffle.png" alt="Shuffle" width="22" height="22" style="margin-right:18px;">
+</div>
+
+<div class="list-buffer"></div>
+<main id="mediaMain"></main>
+
+<footer>
+    <button class="footer-icon left" aria-label="Umschalten">
+        <img src="img/logout.png" alt="Umschalten" width="22" height="22">
+    </button>
+    <button class="footer-icon right" aria-label="Refresh">
+        <img src="img/refresh.png" alt="Refresh" width="22" height="22">
+    </button>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
